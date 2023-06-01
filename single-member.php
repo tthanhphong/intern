@@ -16,17 +16,13 @@
                         <h1 style="text-align: left; padding:0; margin:0; font-size: 2.5rem;">Positon. <?php the_field('position'); ?></h1>
                         <p style="text-align: left; padding:0; margin:0; font-size: 1rem;">Age. <?php the_field('age'); ?></p>
                         <p style="text-align: left; padding:0; margin:0; font-size: 1rem;">Phone. <?php the_field('phone'); ?></p>
-                        <p style="text-align: left; padding:0; margin:0; font-size: 1rem;">Adress. <?php the_field('address'); ?></p>
+                        <p style="text-align: left; padding:0; margin:0; font-size: 1rem;">Adress. <?php the_field('address'); ?></p>   
                     </div>
                 </div>    
             </div>
         </div>
         <div class="col-2 d-flex align-items-end">
-            <div class="col-12 text-start align-items-end">
-            <?php $previous_page = wp_get_referer(); 
-                echo '<button type="button" class="btn" style="background-color: #FF6363;";><a href="http://localhost/wordpress/member/" style="color: #fff; text-decoration: none; font-size: 1rem; font-weight: 700;">Back</a></button>';
-            ?>
-            </div>
+            
         </div>
     </div>
 </div>

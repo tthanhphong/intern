@@ -14,51 +14,64 @@ function register_my_menu(){
 }
 add_action('init', 'register_my_menu');
 
+// function
 function custom_contact_form($atts) {
     ob_start();
-
-    $atts = shortcode_atts(array(
-        'recipient' => 'ttp15112001@gmail.com'
-    ), $atts);
-
-    if (isset($_POST['submit'])) {
-        $name = sanitize_text_field($_POST['name']);
-        $email = sanitize_email($_POST['email']);
-        $message = sanitize_textarea_field($_POST['message']);
-
-        // Xử lý dữ liệu biểu mẫu ở đây, ví dụ: gửi email hoặc lưu vào cơ sở dữ liệu
-
-        // Ví dụ: Gửi email thông qua hàm wp_mail()
-        $to = $atts['recipient'];
-        $subject = 'New Contact Form Submission';
-        $body = "Name: $name\nEmail: $email\nMessage: $message";
-        wp_mail($to, $subject, $body);
-
-        // Hiển thị thông báo thành công
-        echo '<p class="success-message">Your message has been sent successfully.</p>';
-    }
-
-    // Hiển thị form liên hệ
     ?>
-    <form action="<?php the_permalink(); ?>" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+    <!-- form contact -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.065216231162!2d106.69955537415534!3d10.729453460060192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31753203774ca659%3A0xfe19ba1b6b8e824c!2sMapletree%20Business%20Centre!5e0!3m2!1svi!2s!4v1682504732780!5m2!1svi!2s" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 pt-5">
+                    <div class="row text-center justify-content-center">
+                        <h1 style="
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 50px;
+                            line-height: 68px;
+                            letter-spacing: -1px;">Contact Us</h1>
+                    </div>
+                        <div class="row justify-content-center pt-2">
+                            <div class="col-12 col-md-9">
+                                <form method="post" action="">
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                        </div>
+                                    </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+                                    <div class="row mt-4">
+                                        <div class="col">
+                                            <input type="text" name="subject" class="form-control" placeholder="Subject"required>
+                                        </div>
+                                    </div>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <input type="submit" name="submit" value="Submit">
-    </form>
+                                    <div class="row mt-4">
+                                        <div class="col">
+                                            <textarea class="form-control" name="message" rows="3" placeholder="How can we help?"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col text-center">
+                                            <button type="submit" name="contact" class="btn" style="padding: 0.8rem 4rem; background-color: #FF6363; color: #fff;">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <?php
-
     return ob_get_clean();
-    
 }
-
 add_shortcode('contact_form', 'custom_contact_form');
+
 
 //slick slider 1
 function custom_course_query() {
@@ -73,22 +86,26 @@ function custom_course_query() {
             )
         )
     ));
-
     return $getposts;
 }
-?>
 
-<?php
+// action hook index
 function hook_javascript(){
-?>
+?>  
 <script>
-     alert('Hihi...');
+    // alert('Wellcome to my website!');
 </script>
-<?php 
-add_action('wp_head', 'hook_javascript');
-
-
-
-
+<?php   
 }
-?>
+add_action('script_notification', 'hook_javascript');
+
+// filter hook index
+// function change_the_title( $output ) {
+//     $output = '<h2>All courses for free...</h2>';
+//     return $output; 
+// }
+// add_filter( 'filter_hook_title', 'change_the_title' );
+
+
+
+

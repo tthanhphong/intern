@@ -4,8 +4,12 @@
        <div class="container">
         <div class="content">
             <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-12"> 
-                        <h2>Academy</h2>
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                <?php
+                        $title = '<h2>Academy</h2>';
+                        echo apply_filters( 'filter_hook_title', $title );
+                    ?>
+                        
                         <h3>Over one million designers — from freelancers, to some of the largest companies in the world — use Singular to transform their ideas into incredible products, every day.</h3>
                         <a href="#">academy@singular.com</a>
                     </div>
@@ -140,4 +144,5 @@
         </div>
     </section>
     </main>
+    <?php echo do_shortcode('[contact_form]'); ?>
 <?php get_footer(); ?>
