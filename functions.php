@@ -106,6 +106,17 @@ add_action('script_notification', 'hook_javascript');
 // }
 // add_filter( 'filter_hook_title', 'change_the_title' );
 
+/**
+ * Custom Gutenberg Block
+ */
+require get_template_directory() . '/inc/gutenberg.php';
 
+function alecadd_gutenberg_blocks(){
+    wp_register_script('custom-cta-js', get_template_directory_uri() . '/js/gutenberg-cta-block.js', array('wp-blocks'));
 
+    register_block_type('alecaddd/custom-cta', array(
+        'editor_script' => 'custom-cta-js'
+    ));
+}
 
+add_action('init', 'alecadd_gutenberg_blocks');

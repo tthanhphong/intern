@@ -40,7 +40,7 @@
                             <div class="item">
                                 <img src="<?php echo $featured_img_url; ?>" alt="this is a banner">
                             </div>
-                            <a href="<?php the_permalink(); ?>"><h3 class="image-title mt-3"><?php the_title(); ?></h3></a>
+                            <a style="text-decoration: none;" href="<?php the_permalink(); ?>"><h3 class="image-title mt-3"><?php the_title(); ?></h3></a>
                             
                         </div>
                     <?php endwhile; wp_reset_postdata(); ?>
@@ -78,7 +78,7 @@
                             <div class="item">
                                 <img src="<?php echo $featured_img_url; ?>" alt="this is a banner">
                             </div>
-                            <a href="<?php the_permalink(); ?>"><h3 class="image-title mt-3"><?php the_title(); ?></h3></a>
+                            <a style="text-decoration: none;" href="<?php the_permalink(); ?>"><h3 class="image-title mt-3"><?php the_title(); ?></h3></a>
                             
                         </div>
                     <?php endwhile; wp_reset_postdata(); ?>
@@ -116,7 +116,7 @@
                             <div class="item">
                                 <img src="<?php echo $featured_img_url; ?>" alt="this is a banner">
                             </div>
-                            <a href="<?php the_permalink(); ?>"><h3 class="image-title mt-3"><?php the_title(); ?></h3></a>
+                            <a style="text-decoration: none;" href="<?php the_permalink(); ?>"><h3 class="image-title mt-3"><?php the_title(); ?></h3></a>
                             
                         </div>
                     <?php endwhile; wp_reset_postdata(); ?>

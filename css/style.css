@@ -15,7 +15,6 @@ body {
 }
 
 .custom-navbar .navbar-brand {
-    margin-top: 1rem;
     font-weight: 700;
 }
 
@@ -53,8 +52,8 @@ body {
 @media (min-width: 768px) {
     .custom-navbar .custom-navbar-nav li a {
         display: flex;
-        justify-content: space-around;
-        align-items: end;
+        justify-content: center;
+        align-items: center;
         margin-left: 3rem;
     }
 }
@@ -87,7 +86,7 @@ body {
 }
 
 .custom-navbar .custom-navbar-nav li a:hover {
-    color: rgba(169, 169, 169, 0.662745098);
+    color: #a9a9a9a9;
 }
 
 .custom-navbar .custom-navbar-nav li a .btn {
@@ -172,7 +171,7 @@ body {
         margin: 0;
         padding: 1rem 3rem 1rem;
         /* 16px/Regular */
-        font-family: "Inter";
+        font-family: 'Inter';
         font-family: "Inter", sans-serif;
         font-weight: 400;
         font-size: 1.3rem;
@@ -187,7 +186,7 @@ body {
         margin: 0;
         padding: 1rem 3rem 1rem;
         /* 16px/Regular */
-        font-family: "Inter";
+        font-family: 'Inter';
         font-family: "Inter", sans-serif;
         font-weight: 400;
         font-size: 1.3rem;
@@ -1140,7 +1139,6 @@ main .newsletter .img-email img {
 }
 
 .image-slider .item img {
-    -o-object-fit: cover;
     object-fit: cover;
     width: 210px;
     height: 210px;
@@ -1163,13 +1161,9 @@ main .newsletter .img-email img {
 
 @media (min-width: 1200px) {
     .image-slider .item img {
-        width: 340px;
-        height: 340px;
+        width: 300px;
+        height: 300px;
     }
-}
-
-.image-items a {
-    text-decoration: none;
 }
 
 .image {
@@ -1177,14 +1171,13 @@ main .newsletter .img-email img {
 }
 
 .imageimg {
-    -o-object-fit: cover;
     object-fit: cover;
     border-radius: 0.8rem;
 }
 
 .image-title {
     text-decoration: none;
-    color: #000;
+    color: #000000;
     font-size: 1.2rem;
 }
 
@@ -1194,6 +1187,8 @@ main .newsletter .img-email img {
 }
 
 .title h3 {
+    text-decoration: none;
+    color: #000000;
     padding: 0;
     margin: 0;
     display: flex;
@@ -1628,8 +1623,8 @@ main .newsletter .img-email img {
     }
 }
 
-
-/*# sourceMappingURL=style.css.map */
-
-
-/*# sourceMappingURL=style.css.map */
+.wp-block-ideapro-custom-block .company_name {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
